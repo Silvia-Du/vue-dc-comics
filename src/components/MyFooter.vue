@@ -69,7 +69,7 @@ export default {
 
   footer{
     .top{
-      height: 350px;
+      height: 400px;
       overflow: hidden;
       background-image: url(../assets/img/footer-bg.jpg);
       @include backGround();
@@ -82,10 +82,9 @@ export default {
   //FOOTER TOP
   .top .container{
     height: 100%;
-    @include dFlexAlign();
-    justify-content: space-between;
+    @include dFlexBetween();
     img{
-      width: 450px;
+      width: 700px;
     }
   }
 
@@ -118,14 +117,12 @@ export default {
 
   .bottom .container{
     height: 100%;
-    @include dFlexAlign();
-    justify-content: space-between;
+    @include dFlexBetween;
     .button{
       display: inline-block;
       border: 2px solid $brandColor;
       color: white;
-      font-weight: bold;
-      text-transform: uppercase;
+      @include textImportant;
       font-size: $mainfontSize;
       padding: 10px 15px;
     }
@@ -133,9 +130,8 @@ export default {
       @include dFlexAlign;
       p{
         font-size: 0.9rem;
-        font-weight: bold;
+        @include textImportant;
         color: $brandColor;
-        text-transform: uppercase;
       }
       .icon-circle{
         @include dFlexAlign;

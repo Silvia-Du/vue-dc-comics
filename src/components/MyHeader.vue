@@ -8,16 +8,9 @@
       </div>
       <div class="sd-nav">
         <ul class="mb-0">
-          <li><a href="#">characters</a></li>
-          <li><a href="#">comics</a></li>
-          <li><a href="#">movies</a></li>
-          <li><a href="#">tv</a></li>
-          <li><a href="#">games</a></li>
-          <li><a href="#">navItem</a></li>
-          <li><a href="#">navItem</a></li>
-          <li><a href="#">navItem</a></li>
-          <li><a href="#">navItem</a></li>
-          <li><a href="#">navItem</a></li>
+          <li v-for="(item, index) in menuItems" :key="`menu-${index}`">
+            <a href="item.href">{{item.name}}</a>
+          </li>
         </ul>
       </div>
     </div>
@@ -27,7 +20,64 @@
 
 <script>
 export default {
-  name : 'MyHeader'
+  name : 'MyHeader',
+
+  data(){
+    return{
+      menuItems: [
+        {
+          href: '#',
+          name: 'CHARACTERS',
+          active: false,
+        },
+        {
+          href: '#',
+          name: 'COMICS',
+          active: false,
+        },
+        {
+          href: '#',
+          name: 'MOVIES',
+          active: false,
+        },
+        {
+          href: '#',
+          name: 'TV',
+          active: false,
+        },
+        {
+          href: '#',
+          name: 'GAMES',
+          active: false,
+        },
+        {
+          href: '#',
+          name: 'COLLECTIBLES',
+          active: false,
+        },
+        {
+          href: '#',
+          name: 'VIDEOS',
+          active: false,
+        },
+        {
+          href: '#',
+          name: 'FANS',
+          active: false,
+        },
+        {
+          href: '#',
+          name: 'NEWS',
+          active: false,
+        },
+        {
+          href: '#',
+          name: 'SHOP',
+          active: false,
+        }
+      ]
+    }
+  }
 }
 </script>
 
