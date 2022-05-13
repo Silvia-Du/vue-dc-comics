@@ -1,6 +1,10 @@
 <template>
   
-  <main>M</main>
+  <main>
+    <div class="container">
+      <h4>--> Content Goes Here </h4>
+    </div>
+  </main>
 
 </template>
 
@@ -11,5 +15,11 @@ export default {
 </script>
 
 <style laqng="scss">
+
+  main{
+    background-color: #1c1c1c;
+    color: white;
+    padding: 100px 0;
+  }
 
 </style>

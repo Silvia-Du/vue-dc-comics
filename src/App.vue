@@ -34,5 +34,8 @@ export default {
    @import './assets/style/global';
    @import './assets/style/utils';
 
+   @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+
 
 </style>

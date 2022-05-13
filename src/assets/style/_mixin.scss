@@ -1,0 +1,10 @@
+
+@mixin dFlexAlign(){
+  display: flex;
+  align-items: center;
+}
+
+@mixin backGround(){
+  background-size: cover;
+  background-position: center;
+}
