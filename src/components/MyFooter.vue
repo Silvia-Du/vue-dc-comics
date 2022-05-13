@@ -5,11 +5,13 @@
     <div class="top">
 
       <div class="container">
+
         <div class="list-container">
           <div class="list debug">
-            <ul>
-              <li><p>Title</p></li>
-              <li><a href="#">listItem</a></li>
+            <ul
+            v-for="(item, index) in lists[0]" :key="`list-${index}`">
+              <li><p>{{item.title}}</p></li>
+              <li><a href="#">{{}}</a></li>
 
             </ul>
             <ul>
@@ -42,8 +44,10 @@
         </div>
         <div class="cta-social">
           <p>Follow us</p>
-          <div class="icon-circle">
-            <i class="fa-brands fa-facebook-f"></i>
+          <div 
+          v-for="(icon, index) in icons" :key="`icons-${index}`"
+          class="icon-circle">
+            <i :class="`fa-${icon.prefix} fa-${icon.name}`"></i>
           </div>
         </div>
       </div>
@@ -57,7 +61,61 @@
 
 <script>
 export default {
-  name : 'MyFooter'
+  name : 'MyFooter',
+
+  data(){
+    return{
+      icons:[
+        {
+          name:'facebook-f',
+          prefix: 'brands'
+        },
+        {
+          name:'twitter',
+          prefix: 'brands'
+        },
+        {
+          name:'youtube',
+          prefix: 'brands'
+        },
+        {
+          name:'pinterest-p',
+          prefix: 'brands'
+        },
+        {
+          name:'location-dot',
+          prefix: 'solid'
+        },
+      ],
+
+      lists:[
+        {
+          title: 'dc comics',
+          items: [
+            'Characters', 'comics', 'movies', 'TV', 'games', 'Videos', 'news'
+          ]
+        },
+        {
+          title: 'shop',
+          items: [
+            'shop DC', 'Shop DC Collectibles'
+          ]
+        },
+        {
+          title: 'dc',
+          items: [
+            'therms Of Use', 'Privacy policy (New)', 'Ad choice', 'advertising', 'jobs', 'Subscriptions', 'talent Workshop', 'CPSC Certficates', 'ratings', 'shop Help', 'contact Us'
+          ]
+        },
+        {
+          title: 'dc',
+          items: [
+            'DC', 'MAD Magazine', 'DC Kids', 'DC Universe', 'DC Powe Visa'
+          ]
+        }
+      ]
+    }
+  }
 }
 </script>
 
@@ -84,7 +142,7 @@ export default {
     height: 100%;
     @include dFlexBetween();
     img{
-      width: 700px;
+      width: 60%;
     }
   }
 
@@ -138,6 +196,7 @@ export default {
         justify-content: center;
         width: 30px;
         height: 30px;
+        font-size: 1.4rem;
         border-radius: 50%;
         margin-left: 10px;
         color: #303030;
