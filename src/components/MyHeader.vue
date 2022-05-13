@@ -54,9 +54,9 @@ export default {
          li a{
           text-decoration: none;  
           color: #494c4f;
-          margin: 0 20px;
+          margin: 0 15px;
           text-transform: uppercase;
-          font-size: 0.8rem;
+          font-size: 0.7rem;
         }
       } 
     }
