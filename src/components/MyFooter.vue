@@ -7,28 +7,31 @@
       <div class="container">
 
         <div class="list-container">
-          <div class="list debug">
+          <div class="list">
+            <p>Dc Comics</p>
             <ul
-            v-for="(item, index) in lists[0]" :key="`list-${index}`">
-              <li><p>{{item.title}}</p></li>
-              <li><a href="#">{{}}</a></li>
+            v-for="(item, index) in dcComicsList" :key="`dcList-${index}`">
+              <li><a :href="item.href">{{item.name}}</a></li>
 
             </ul>
-            <ul>
-              <li><p>Title</p></li>
-              <li><a href="#">listItem</a></li>
+            <p>Shop</p>
+            <ul
+            v-for="(item, index) in shopList" :key="`shopL-${index}`">
+              <li><a :href="item.href">{{item.name}}</a></li>
             </ul>
           </div>
-          <div class="list debug">
-            <ul>
-              <li><p>Title</p></li>
-              <li><a href="#">listItem</a></li>
+          <div class="list">
+            <p>Dc</p>
+            <ul
+            v-for="(item, index) in dcList" :key="`dcList-${index}`">
+              <li><a :href="item.href">{{item.name}}</a></li>
             </ul>
           </div>
-          <div class="list debug">
-            <ul>
-              <li><p>Title</p></li>
-              <li><a href="#">listItem</a></li>
+          <div class="list">
+            <p>Sites</p>
+            <ul
+            v-for="(item, index) in sitesList" :key="`sitesL-${index}`">
+              <li><a :href="item.href">{{item.name}}</a></li>
             </ul>
           </div>
         </div>
@@ -88,30 +91,115 @@ export default {
         },
       ],
 
-      lists:[
+      dcComicsList:[
         {
-          title: 'dc comics',
-          items: [
-            'Characters', 'comics', 'movies', 'TV', 'games', 'Videos', 'news'
-          ]
+          name: 'Characters',
+          href: '#'
         },
         {
-          title: 'shop',
-          items: [
-            'shop DC', 'Shop DC Collectibles'
-          ]
+          name: 'comics',
+          href: '#'
         },
         {
-          title: 'dc',
-          items: [
-            'therms Of Use', 'Privacy policy (New)', 'Ad choice', 'advertising', 'jobs', 'Subscriptions', 'talent Workshop', 'CPSC Certficates', 'ratings', 'shop Help', 'contact Us'
-          ]
+          name: 'movies',
+          href: '#'
         },
         {
-          title: 'dc',
-          items: [
-            'DC', 'MAD Magazine', 'DC Kids', 'DC Universe', 'DC Powe Visa'
-          ]
+          name: 'TV',
+          href: '#'
+        },
+        {
+          name: 'games',
+          href: '#'
+        },
+        {
+          name: 'videos',
+          href: '#'
+        },
+        {
+          name: 'news',
+          href: '#'
+        }
+      ],
+
+      shopList:[
+         {
+          name: 'shop DC',
+          href: '#'
+        },
+         {
+          name: 'Shop DC Collectibles',
+          href: '#'
+        }
+      ],
+
+      dcList:[
+        {
+          name: 'therms Of Use',
+          href: '#'
+        },
+        {
+          name: 'Privacy policy (New)',
+          href: '#'
+        },
+        {
+          name: 'ad choice',
+          href: '#'
+        },
+        {
+          name: 'advertising',
+          href: '#'
+        },
+        {
+          name: 'jobs',
+          href: '#'
+        },
+        {
+          name: 'Subscriptions',
+          href: '#'
+        },
+        {
+          name: 'talent Workshop',
+          href: '#'
+        },
+        {
+          name: 'CPSC Certficates',
+          href: '#'
+        },
+        {
+          name: 'ratings',
+          href: '#'
+        },
+        {
+          name: 'shop Help',
+          href: '#'
+        },
+        {
+          name: 'contact Us',
+          href: '#'
+        },
+      ],
+
+      sitesList:[
+        {
+          name : 'DC',
+          href : '#'
+        },
+        {
+          name : 'MAD Magazine',
+          href : '#'
+        },
+        {
+          name : 'DC Kids',
+          href : '#'
+        },
+        {
+          name : 'DC Universe',
+          href : '#'
+        },
+        {
+          name : 'DC Powe Visa',
+          href : '#'
         }
       ]
     }
@@ -154,22 +242,24 @@ export default {
     margin-top: 30px;
     .list{
       margin: 0 20px;
+      p{
+        margin: 10px 0;
+        font-weight: bold;
+        font-size: 1rem;
+        text-transform: uppercase;
+      }
       ul li{
         list-style: none;
-        p{
-          margin: 15px 0;
-          font-weight: bold;
-          font-size: 0.9rem;
-        }
         a{
           text-decoration: none;
           font-size: $mainfontSize;
-          color: rgb(209, 203, 203);
+          color: rgb(117, 111, 111);
           margin: 10px 0;
         }
       }
     } 
   }
+
 
   // FOOTER BOTTOM
 
@@ -180,14 +270,15 @@ export default {
       display: inline-block;
       border: 2px solid $brandColor;
       color: white;
+      font-size: 0.9rem;
       @include textImportant;
-      font-size: $mainfontSize;
       padding: 10px 15px;
     }
     .cta-social{
       @include dFlexAlign;
       p{
-        font-size: 0.9rem;
+        font-size: 1.1rem;
+        margin-right: 20px;
         @include textImportant;
         color: $brandColor;
       }
