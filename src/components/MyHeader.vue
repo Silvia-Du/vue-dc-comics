@@ -7,8 +7,11 @@
         <img src="../assets/img/dc-logo.png" alt="">
       </div>
       <div class="sd-nav">
-        <ul class="mb-0">
-          <li v-for="(item, index) in menuItems" :key="`menu-${index}`">
+        <ul>
+          <li
+          @click="clickedItem = index"
+          :class="{'active': clickedItem === index}"
+          v-for="(item, index) in menuItems" :key="`menu-${index}`">
             <a href="item.href">{{item.name}}</a>
           </li>
         </ul>
@@ -24,6 +27,9 @@ export default {
 
   data(){
     return{
+
+      clickedItem: -1,
+
       menuItems: [
         {
           href: '#',
@@ -77,12 +83,14 @@ export default {
         }
       ]
     }
-  }
+  },
+
 }
 </script>
 
 <style lang="scss" scoped>
 
+  @import '../assets/style/vars';
   @import '../assets/style/mixin';
 
   header{
@@ -96,20 +104,38 @@ export default {
   }
 
   .container{
-      @include dFlexAlign();
-      justify-content: space-between;
-      ul{
-        display: flex;
-        list-style: none;
-         li a{
+    @include dFlexAlign();
+    justify-content: space-between;   
+  }
+
+  .sd-nav{
+    height: 100%;
+    ul{
+      height: 100%;
+      display: flex;
+      list-style: none;
+      li{
+        &:hover, &:active{
+          border-bottom: 3px solid $brandColor; 
+          a{
+            color: $brandColor;
+          }
+        }
+        height: 100%;
+        border-bottom: 3px solid white; 
+        @include dFlexAlign;
+        a{
           text-decoration: none;  
           color: #494c4f;
           margin: 0 15px;
-          text-transform: uppercase;
-          font-size: 0.7rem;
+          font-size: 0.8rem;
+          @include textImportant;
         }
-      } 
-    }
+      }
+    } 
+  }
+
+      
 
  
 </style>

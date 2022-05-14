@@ -215,7 +215,7 @@ export default {
 
   footer{
     .top{
-      height: 400px;
+      height: 350px;
       overflow: hidden;
       background-image: url(../assets/img/footer-bg.jpg);
       @include backGround();
@@ -230,7 +230,7 @@ export default {
     height: 100%;
     @include dFlexBetween();
     img{
-      width: 60%;
+      width: 500px;
     }
   }
 
@@ -241,11 +241,11 @@ export default {
     align-self: flex-start;
     margin-top: 30px;
     .list{
-      margin: 0 20px;
+      margin-right: 30px;
       p{
         margin: 10px 0;
         font-weight: bold;
-        font-size: 1rem;
+        font-size: 1.1rem;
         text-transform: uppercase;
       }
       ul li{
