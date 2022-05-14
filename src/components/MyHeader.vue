@@ -100,7 +100,7 @@ export default {
     display: flex;
     
     .logo img{
-      width: 80px;
+      width: 70px;
     }
   }
 

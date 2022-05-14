@@ -47,11 +47,9 @@
         </div>
         <div class="cta-social">
           <p>Follow us</p>
-          <div 
+          <a 
           v-for="(icon, index) in icons" :key="`icons-${index}`"
-          class="icon-circle">
-            <i :class="`fa-${icon.prefix} fa-${icon.name}`"></i>
-          </div>
+          :href="icon.href"><img :src="icon.image" :alt="icon.name"></a>
         </div>
       </div>
     </div>
@@ -70,24 +68,29 @@ export default {
     return{
       icons:[
         {
-          name:'facebook-f',
-          prefix: 'brands'
+          name:'facebook-icon',
+          image: require('../assets/img/footer-facebook.png'),
+          href: '#'
         },
         {
-          name:'twitter',
-          prefix: 'brands'
+          name:'twitter-icon',
+          image: require('../assets/img/footer-twitter.png'),
+          href: '#'
         },
         {
-          name:'youtube',
-          prefix: 'brands'
+          name:'you-tube-icon',
+          image: require('../assets/img/footer-youtube.png'),
+          href: '#'
         },
         {
-          name:'pinterest-p',
-          prefix: 'brands'
+          name:'pinterest-icon',
+          image: require('../assets/img/footer-pinterest.png'),
+          href: '#'
         },
         {
-          name:'location-dot',
-          prefix: 'solid'
+          name:'facebook-icon',
+          image: require('../assets/img/footer-periscope.png'),
+          href: '#'
         },
       ],
 
@@ -278,20 +281,15 @@ export default {
       @include dFlexAlign;
       p{
         font-size: 1.1rem;
-        margin-right: 20px;
-        @include textImportant;
+        margin-right: 10px;
         color: $brandColor;
+        @include textImportant;
       }
-      .icon-circle{
-        @include dFlexAlign;
-        justify-content: center;
-        width: 30px;
-        height: 30px;
-        font-size: 1.4rem;
-        border-radius: 50%;
-        margin-left: 10px;
-        color: #303030;
-        background-color: #797979;
+      a{
+        margin-left: 15px;
+        img{
+          width: 90%;
+        }
       }
     }
   }

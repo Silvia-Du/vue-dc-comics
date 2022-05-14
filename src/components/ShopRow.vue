@@ -66,19 +66,19 @@ export default {
       padding: 40px 30px;
       display: flex;
       justify-content: space-between;
-      .item:last-child{
-        img{
-          height: auto;
-          width: 70px;
-        }
-      }
     }
   }
 
   .item{
     @include dFlexAlign;
+    &:last-child{
+        img{
+          height: auto;
+          width: 70px;
+        }
+      }
     img{
-      height: 70px;
+      height: 60px;
     }
 
     p{
