@@ -9,10 +9,11 @@
       <div class="sd-nav">
         <ul>
           <li
-          @click="clickedItem = index"
-          :class="{'active': clickedItem === index}"
+          @click="getActiveItem(index)"
+          :class="{'active': item.active}"
           v-for="(item, index) in menuItems" :key="`menu-${index}`">
-            <a href="item.href">{{item.name}}</a>
+            <a 
+            href="item.href">{{item.name}}</a>
           </li>
         </ul>
       </div>
@@ -34,7 +35,7 @@ export default {
         {
           href: '#',
           name: 'CHARACTERS',
-          active: false,
+          active: true,
         },
         {
           href: '#',
@@ -83,7 +84,7 @@ export default {
         }
       ]
     }
-  },
+  }
 
 }
 </script>
@@ -115,7 +116,7 @@ export default {
       display: flex;
       list-style: none;
       li{
-        &:hover, &:active{
+        &:hover, &.active{
           border-bottom: 3px solid $brandColor; 
           a{
             color: $brandColor;

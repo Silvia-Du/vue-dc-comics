@@ -5,8 +5,7 @@
       <div 
       v-for="(item, index) in ctaShopItems" :key="`ctaItem-${index}`"
       class="item">
-        <a :href="item.href"><img :src="item.image" :alt="item.name"></a>
-        
+        <a :href="item.href"><img :src="item.image" :alt="item.name"></a>       
         <p>{{item.name}}</p>
       </div>
       
@@ -15,9 +14,6 @@
 </template>
 
 <script>
-
-
-
 
 export default {
   name: 'ShopRow',
@@ -70,13 +66,17 @@ export default {
       padding: 40px 30px;
       display: flex;
       justify-content: space-between;
+      .item:last-child{
+        img{
+          height: auto;
+          width: 70px;
+        }
+      }
     }
   }
 
   .item{
     @include dFlexAlign;
-    
-
     img{
       height: 70px;
     }
