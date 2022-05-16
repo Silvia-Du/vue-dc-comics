@@ -1,8 +1,9 @@
 <template>
   
   <main>
+    <div class="jumbotron"></div>
     <div class="container">
-      <h4>--> Content Goes Here </h4>
+      <CurrentSeries />
     </div>
     <ShopRow />
   </main>
@@ -11,14 +12,16 @@
 
 <script>
 
-import ShopRow from './ShopRow.vue'
+import ShopRow from './ShopRow.vue';
+import CurrentSeries from './CurrentSeries.vue';
 
 export default {
   name : 'MyMain',
 
   components : {
-    ShopRow
-  }
+    ShopRow,
+    CurrentSeries
+}
 }
 </script>
 
@@ -26,8 +29,13 @@ export default {
 
   main{
     color: white;
-    padding-top: 10px;
     background-color: #1c1c1c;
+    .jumbotron{
+      height: 25vh;
+      background-image: url(../assets/img/jumbotron.jpg);
+      background-size: cover;
+      background-position: inherit;
+    }
     .container{
       padding: 50px 0;
     }
