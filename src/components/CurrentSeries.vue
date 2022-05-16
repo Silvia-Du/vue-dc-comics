@@ -1,6 +1,6 @@
 <template>
   <div class="current-series">
-    <div class="container debug">
+    <div class="container">
       <CurrSeriesCard 
       v-for="(card, index) in cardSeries" :key="`card-${index}`"
       :cardItem = "card"/>
@@ -36,9 +36,9 @@ export default {
     background-color: #1c1c1c;
     .container{
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       flex-wrap: wrap;
-      padding: 40px 0;
+      padding: 20px 0;
     }
   }
 

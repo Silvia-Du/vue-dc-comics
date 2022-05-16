@@ -1,6 +1,8 @@
 <template>
   <div class="card">
-    <img :src="cardItem.thumb" :alt="cardItem.type">
+    <div class="img-box">
+      <img :src="cardItem.thumb" :alt="cardItem.type">
+    </div>
     <p>{{cardItem.series}}</p>
   </div>
 </template>
@@ -20,11 +22,17 @@ export default {
 <style lang="scss">
 
   .card{
-    width: calc((100% / 6) - 25px);
-    img{
-      width: 100%;
-      height: ;
-
+    margin: 20px 15px;
+    width: 180px;
+    text-transform: uppercase;
+    .img-box{
+      height: 200px;
+      overflow: hidden;
+      margin-bottom: 15px;
+      img{
+        width: 100%;
+        
+      }
     }
   }
 
