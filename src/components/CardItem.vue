@@ -23,15 +23,14 @@ export default {
 
   .card{
     margin: 20px 15px;
-    width: 180px;
+    width: 190px;
     text-transform: uppercase;
     .img-box{
-      height: 200px;
+      height: 190px;
       overflow: hidden;
       margin-bottom: 15px;
       img{
-        width: 100%;
-        
+        width: 100%; 
       }
     }
   }

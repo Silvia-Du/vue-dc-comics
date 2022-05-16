@@ -63,7 +63,7 @@ export default {
     color: white;
     background-color: #0282f9;
     .container{
-      padding: 40px 30px;
+      padding: 40px;
       display: flex;
       justify-content: space-between;
     }
