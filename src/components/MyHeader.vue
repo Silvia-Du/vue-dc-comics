@@ -129,7 +129,7 @@ export default {
           text-decoration: none;  
           color: #494c4f;
           margin: 0 15px;
-          font-size: 0.8rem;
+          font-size: 0.9rem;
           @include textImportant;
         }
       }

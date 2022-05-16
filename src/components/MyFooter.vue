@@ -247,9 +247,8 @@ export default {
       margin-right: 30px;
       p{
         margin: 10px 0;
-        font-weight: bold;
         font-size: 1.1rem;
-        text-transform: uppercase;
+        @include textImportant;
       }
       ul li{
         list-style: none;
