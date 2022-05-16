@@ -1,20 +1,27 @@
 <template>
   
   <main>
+    <!-- jumbotron -->
     <div class="jumbotron"></div>
 
+    <!-- CurrentSeries Row -->
     <div class="current-series">
+
       <div class="container">
+
         <div class="flag">
           <p>Current Series</p>
         </div>
         <CardItem
         v-for="(card, index) in cardSeries" :key="`card-${index}`"
         :cardItem = "card"/>
-      </div>
-      <div class="btn-cta"><p>Load More</p></div>
-    </div>
 
+      </div>
+
+      <div class="btn-cta"><p>Load More</p></div>
+
+    </div>
+    <!-- Shop Row -->
     <ShopRow />
 
   </main>

@@ -1,10 +1,13 @@
 <template>
+
   <div class="card">
     <div class="img-box">
       <img :src="cardItem.thumb" :alt="cardItem.type">
     </div>
+    
     <p>{{cardItem.series}}</p>
   </div>
+
 </template>
 
 <script>
@@ -12,10 +15,8 @@ export default {
   name: 'CurrSeriescardItem',
   props: {
     cardItem: Object,
-  },
+  }
 
-  mounted() {
-  },
 }
 </script>
 
