@@ -26,6 +26,7 @@ export default {
     margin: 20px 15px;
     width: 190px;
     text-transform: uppercase;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     .img-box{
       height: 190px;
       overflow: hidden;

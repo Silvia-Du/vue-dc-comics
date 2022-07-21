@@ -61,7 +61,7 @@ export default {
     color: white;
     .jumbotron {
       height: 420px;
-      background-image: url(../assets/img/jumbotron.jpg);
+      background-image: url(../assets/img/dcNewJumbo.png);
       background-size: cover;
       background-position: inherit;
     }
